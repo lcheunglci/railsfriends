@@ -6,7 +6,6 @@
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Twitter</th>
-      <th scope="col">User Id</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -18,7 +17,6 @@
           <td><%= friend.email %></td>
           <td><%= friend.phone %></td>
           <td><%= friend.twitter %></td>
-          <td><%= friend.user_id %></td>
           <td><%= link_to "Delete", class:'btn btn-danger btn-sm' friend, method: :delete, data: { confirm: 'Are you sure?'} %></td>
         </tr>
       <% end %>
