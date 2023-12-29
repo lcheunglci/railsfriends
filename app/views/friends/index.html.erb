@@ -6,6 +6,7 @@
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Twitter</th>
+      <th scope="col">User Id</th>
       <th scope="col" colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +18,15 @@
       <td><%= friend.email %></td>
       <td><%= friend.phone %></td>
       <td><%= friend.twitter %></td>
+      <td><%= friend.user_id %></td>
       <td><%= link_to "Show", friend %></td>
+      <% if friend.user == current_user %>
       <td><%= link_to "Edit", edit_friend_path(friend) %></td>
       <td><%= link_to "Delete", friend, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+      <% else %>
+      <td></td>
+      <td></td>
+      <% end %>
     </tr>
     <% end %>
   </tbody>
